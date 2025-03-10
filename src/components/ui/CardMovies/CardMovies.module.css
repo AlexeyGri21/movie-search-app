@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+}
+
+.img img {
+  width: 130px;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.informations {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.informations h3 {
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Times New Roman";
+  margin: 0;
+}
+
+.informations h4 {
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Times New Roman";
+  margin: 0;
+}
+
+.informations p {
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Times New Roman";
+  margin: 0;
+}

@@ -1,0 +1,58 @@
+.container h1 {
+  color: #000;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Times New Roman";
+}
+
+.group {
+  display: flex;
+  gap: 10px;
+}
+
+.group input {
+  width: 240px;
+  color: #000;
+  font-size: 16px;
+  font-family: "Times New Roman";
+  border: 2px solid rgb(159, 95, 0);
+  border-radius: 31px;
+  padding: 10px 10px;
+}
+
+.searchButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: auto;
+  font-size: 16px;
+  font-family: "Times New Roman";
+  color: #fff;
+  background-color: rgb(214, 129, 2);
+  border: 2px solid rgb(214, 129, 2);
+  border-radius: 31px;
+}
+.spinner {
+  border: 3px solid transparent;
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.informations p {
+  color: #939393;
+  font-size: 16px;
+  font-family: "Times New Roman";
+}
