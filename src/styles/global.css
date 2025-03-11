@@ -1,0 +1,16 @@
+:root{
+    --primary-100: #0b0b1d;
+    --primary-200: #fffffe;
+    --primary-300: #94a1b2;
+    --primary-400: #383bcb;
+    --primary-500: #fffffe;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0;
+}
+

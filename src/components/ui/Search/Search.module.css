@@ -1,8 +1,20 @@
-.container h1 {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.containerInner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.containerInner h1 {
   color: #000;
   font-size: 22px;
   font-weight: 600;
-  font-family: "Times New Roman";
 }
 
 .group {
@@ -14,10 +26,13 @@
   width: 240px;
   color: #000;
   font-size: 16px;
-  font-family: "Times New Roman";
-  border: 2px solid rgb(159, 95, 0);
+  border: 2px solid var(--primary-400);
   border-radius: 31px;
   padding: 10px 10px;
+}
+.btnGroup {
+  display: flex;
+  gap: 10px;
 }
 
 .searchButton {
@@ -27,10 +42,9 @@
   width: 100px;
   height: auto;
   font-size: 16px;
-  font-family: "Times New Roman";
   color: #fff;
-  background-color: rgb(214, 129, 2);
-  border: 2px solid rgb(214, 129, 2);
+  background-color: var(--primary-400);
+  border: 2px solid var(--primary-400);
   border-radius: 31px;
 }
 .spinner {
@@ -51,8 +65,27 @@
   }
 }
 
+.clearButton {
+  width: 44px;
+  font-size: 30px;
+  color: #fff;
+  background-color: var(--primary-400);
+  border: 2px solid var(--primary-400);
+  border-radius: 31px;
+}
+
 .informations p {
   color: #939393;
   font-size: 16px;
-  font-family: "Times New Roman";
 }
+
+@media (max-width: 1270px) {
+  .group {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+

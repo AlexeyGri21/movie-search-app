@@ -7,6 +7,7 @@ const CardMovies = (props) => {
         <img
           src={`https://image.tmdb.org/t/p/w200${props.poster_path}`}
           alt={props.title}
+          loading="lazy"
         />
       </div>
       <div className={styles.informations}>

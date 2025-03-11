@@ -1,35 +1,60 @@
 import styles from "./Search.module.css";
 
 const Search = (props) => {
+  const {
+    query,
+    onReset,
+    isLoading,
+    disabled,
+    onClick,
+    moviesFound,
+    search,
+    onChange,
+  } = props;
+
   return (
     <div className={styles.container}>
-      <h1>Поиск фильмов</h1>
+      <div className={styles.containerInner}>
+        <h1>Поиск фильмов</h1>
+      </div>
+
       <div className={styles.group}>
         <input
           type="text"
-          value={props.search}
-          onChange={props.onChange}
+          value={search}
+          onChange={onChange}
           placeholder="Введите название фильма"
         />
-        <button
-          type="submit"
-          disabled={props.isLoading || props.disabled} 
-          onClick={props.onClick}
-          className={styles.searchButton}
-        >
-          {props.isLoading ? (
-            <span
-              className={styles.spinner}
-              role="status"
-              aria-hidden="true"
-            ></span>
-          ) : (
-            <>Найти</>
-          )}
-        </button>
+        <div className={styles.btnGroup}>
+          <button
+            type="submit"
+            disabled={isLoading || disabled}
+            onClick={onClick}
+            className={styles.searchButton}
+          >
+            {isLoading ? (
+              <span
+                className={styles.spinner}
+                role="status"
+                aria-hidden="true"
+              ></span>
+            ) : (
+              <>Найти</>
+            )}
+          </button>
+          <button
+            type="button"
+            onClick={onReset}
+            className={styles.clearButton}
+          >
+            &times;
+          </button>
+        </div>
       </div>
       <div className={styles.informations}>
-      {!props.moviesFound && <p>Фильма по вашему запросу не найдено...</p>}
+        {query && !moviesFound && !isLoading && (
+          <p>Фильма по вашему запросу не найдено...</p>
+        )}
       </div>
     </div>
   );
